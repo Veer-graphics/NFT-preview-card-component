@@ -1,0 +1,153 @@
+/* universal */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit',sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+/* root */
+:root{
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);   
+--overlay: hsla(178, 100%, 50%, 0.7);   
+
+--Main-bg: hsl(217, 54%, 11%);
+--Card-bg: hsl(216, 50%, 16%);
+--Line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+main{
+    padding: 20px;
+}
+/* body */
+body{
+    font-size: 18px;
+    line-height: 1.6;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Main-bg);
+}
+/* images */
+img{
+    max-width: 100%;
+}
+/* links */
+a{
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s ease all;
+}
+a:hover{
+    color: var(--Cyan);
+}
+/* card */
+.card{
+    background-color: var(--Card-bg);
+    max-width: 340px;
+    border-radius: 10px;
+    padding: 25px;
+}
+/* img-wrapper */
+.img-wrapper{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.overlay{
+    background-color: var(--overlay);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.img-wrapper:hover .overlay{
+    visibility: visible;
+}
+.img-wrapper img{
+    border-radius: 8px;
+    display: block;
+}
+/* text wrapper */
+.text-wrapper{
+    margin-top: 30px;
+    margin: 30px 0;
+}
+.Equilibrium{
+    font-weight: 600;
+    font-size: 25px;
+    transition: .3s ease all;
+}
+.Equilibrium:hover{
+    color: var(--Cyan);
+}
+.description{
+    max-width: 90%;
+    line-height: 1.3;
+    margin: 10px 0;
+}
+p{
+    color: var(--Soft-blue);
+}
+/* row */
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul li{
+    color: var(--Soft-blue);
+}
+.icon{
+    margin-right: 10px;
+}
+.ethereum{
+    font-weight: 600;
+    color: var(--Cyan);
+}
+/* divider */
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: var(--Line);
+    margin: 20px 0;
+}
+/* user */
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.userImg{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+.userImg img{
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+
+
+/* attribution */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
